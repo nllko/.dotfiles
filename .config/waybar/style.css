@@ -1,0 +1,151 @@
+* {
+    font-family: "JetBrains Mono", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    transition: background-color 0.3s ease-out;
+}
+
+window#waybar {
+    /*Same as #1a1b26*/
+    background: rgba(26, 27, 38, 0.75);
+    color: #c0caf5;
+    font-family: "JetBrains Mono";
+    transition: background-color 0.5s;
+}
+
+.modules-left,
+.modules-center,
+.modules-right {
+    /*Same as #000008*/
+    background: rgba(0, 0, 8, 0.7);
+    margin: 5px 10px;
+    padding: 0 5px;
+    border-radius: 5px;
+}
+
+.modules-left {
+    padding: 0;
+}
+
+.modules-center {
+    padding: 0 10px;
+}
+
+#clock,
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#wireplumber,
+#custom-media,
+#tray,
+#mode,
+#idle_inhibitor,
+#scratchpad,
+#power-profiles-daemon,
+#language,
+#mpd {
+    padding: 0 10px;
+    border-radius: 5px;
+}
+
+/*#clock:hover,*/
+/*#battery:hover,*/
+/*#cpu:hover,*/
+/*#memory:hover,*/
+/*#disk:hover,*/
+/*#temperature:hover,*/
+/*#backlight:hover,*/
+/*#network:hover,*/
+/*#pulseaudio:hover,*/
+/*#wireplumber:hover,*/
+/*#custom-media:hover,*/
+/*#tray:hover,*/
+/*#mode:hover,*/
+/*#idle_inhibitor:hover,*/
+/*#scratchpad:hover,*/
+/*#power-profiles-daemon:hover,*/
+/*#language:hover,*/
+/*#mpd:hover {*/
+/*    background: rgba(26, 27, 38, 0.9);*/
+/*}*/
+#backlight:hover {
+    color: #d3d617;
+}
+
+#pulseaudio:hover {
+    color: #dfb228;
+}
+
+#network:hover {
+    color: #5bb1f7;
+}
+
+#battery.charging,
+#battery.plugged {
+    color: #abe9b3;
+}
+
+#battery.critical:not(.charging) {
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes blink {
+    to {
+        color: #bf616a;
+    }
+}
+
+#battery:hover {
+    color: #abe9b3;
+}
+
+#clock:hover {
+    color: #fae3b0;
+}
+
+#workspaces button {
+    background: transparent;
+    font-family: "JetBrains Mono Nerd";
+    font-weight: 900;
+    font-size: 13pt;
+    color: #c0caf5;
+    border: none;
+    border-radius: 5px;
+    padding-top: 5px;
+}
+
+#workspaces button.active {
+    /*background: #13131d;*/
+    border-radius: 4px;
+    border-top: 2px solid #abe9b3;
+    border-bottom: 2px solid #abe9b3;
+}
+
+#workspaces button:hover {
+    background: #11111b;
+    color: #cdd6f4;
+    box-shadow: none;
+}
+
+#custom-arch {
+    margin-left: 5px;
+    padding: 0 10px;
+    font-size: 25px;
+    transition: color 0.5s;
+}
+
+#custom-arch:hover {
+    color: #1793d1;
+}
+
+#custom-weather:hover {
+    color: #2b8b7f;
+}
