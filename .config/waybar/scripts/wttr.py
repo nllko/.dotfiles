@@ -109,6 +109,9 @@ for i, day in enumerate(weather["weather"]):
         data["tooltip"] += "Today, "
     if i == 1:
         data["tooltip"] += "Tomorrow, "
+    if i == 2:
+        data["tooltip"] += "</b>"
+        break
     data["tooltip"] += f"{day['date']}</b>\n"
     data["tooltip"] += f"⬆️ {day['maxtempC']}° ⬇️ {day['mintempC']}° "
     data["tooltip"] += (

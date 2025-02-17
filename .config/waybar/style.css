@@ -12,6 +12,11 @@ window#waybar {
     transition: background-color 0.5s;
 }
 
+tooltip {
+    background-color: #00000f;
+    border: none;
+}
+
 .modules-left,
 .modules-center,
 .modules-right {

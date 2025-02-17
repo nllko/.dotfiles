@@ -1,0 +1,59 @@
+window {
+  font-family: "JetBrains Mono", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 16pt;
+  background-color: rgba(17, 17, 27, 0.6);
+}
+
+button {
+  color: #c0caf5;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 10%;
+  background-color: transparent;
+  outline-style: none;
+  border: none;
+  border-radius: 20px;
+  box-shadow: none;
+  text-shadow: none;
+  animation: gradient_f 20s ease-in infinite;
+}
+
+button:focus,
+button:hover {
+  background-size: 20%;
+  background-color: #6464c8;
+  box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.4);
+  transition:
+    all 0.3s cubic-bezier(0.55, 0, 0.28, 1.682),
+    box-shadow 0.5s ease-in;
+}
+
+#lock {
+  background-image: image(url("/usr/share/wlogout/icons/lock.png"),
+      url("/usr/local/share/wlogout/icons/lock.png"));
+}
+
+#logout {
+  background-image: image(url("/usr/share/wlogout/icons/logout.png"),
+      url("/usr/local/share/wlogout/icons/logout.png"));
+}
+
+#shutdown {
+  background-image: image(url("/usr/share/wlogout/icons/shutdown.png"),
+      url("/usr/local/share/wlogout/icons/shutdown.png"));
+}
+
+#reboot {
+  background-image: image(url("/usr/share/wlogout/icons/reboot.png"),
+      url("/usr/local/share/wlogout/icons/reboot.png"));
+}
+
+#suspend {
+  background-image: image(url("/usr/share/wlogout/icons/suspend.png"),
+      url("/usr/local/share/wlogout/icons/suspend.png"));
+}
+
+#hibernate {
+  background-image: image(url("/usr/share/wlogout/icons/hibernate.png"),
+      url("/usr/local/share/wlogout/icons/hibernate.png"));
+}
