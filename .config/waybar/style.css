@@ -130,8 +130,8 @@ tooltip {
 #workspaces button.active {
     /*background: #13131d;*/
     border-radius: 4px;
-    border-top: 2px solid #abe9b3;
-    border-bottom: 2px solid #abe9b3;
+    border-top: 2px solid #c0caf5;
+    border-bottom: 2px solid #c0caf5;
 }
 
 #workspaces button:hover {
