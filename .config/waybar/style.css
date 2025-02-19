@@ -1,38 +1,38 @@
 * {
-    font-family: "JetBrains Mono", Roboto, Helvetica, Arial, sans-serif;
-    font-size: 15px;
-    transition: background-color 0.3s ease-out;
+  font-family: "JetBrains Mono", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  transition: background-color 0.3s ease-out;
 }
 
 window#waybar {
-    /*Same as #1a1b26*/
-    background: rgba(26, 27, 38, 0.75);
-    color: #c0caf5;
-    font-family: "JetBrains Mono";
-    transition: background-color 0.5s;
+  /*Same as #1a1b26*/
+  background: rgba(26, 27, 38, 0.75);
+  color: #c0caf5;
+  font-family: "JetBrains Mono";
+  transition: background-color 0.5s;
 }
 
 tooltip {
-    background-color: #00000f;
-    border: none;
+  background-color: #00000f;
+  border: none;
 }
 
 .modules-left,
 .modules-center,
 .modules-right {
-    /*Same as #000008*/
-    background: rgba(0, 0, 8, 0.7);
-    margin: 5px 10px;
-    padding: 0 5px;
-    border-radius: 5px;
+  /*Same as #000008*/
+  background: rgba(0, 0, 8, 0.7);
+  margin: 5px 10px;
+  padding: 0 5px;
+  border-radius: 5px;
 }
 
 .modules-left {
-    padding: 0;
+  padding: 0;
 }
 
 .modules-center {
-    padding: 0 10px;
+  padding: 0 10px;
 }
 
 #clock,
@@ -53,8 +53,8 @@ tooltip {
 #power-profiles-daemon,
 #language,
 #mpd {
-    padding: 0 10px;
-    border-radius: 5px;
+  padding: 0 10px;
+  border-radius: 5px;
 }
 
 /*#clock:hover,*/
@@ -78,79 +78,89 @@ tooltip {
 /*    background: rgba(26, 27, 38, 0.9);*/
 /*}*/
 #backlight:hover {
-    color: #d3d617;
+  color: #d3d617;
 }
 
 #pulseaudio:hover {
-    color: #dfb228;
+  color: #dfb228;
 }
 
 #network:hover {
-    color: #5bb1f7;
+  color: #5bb1f7;
 }
 
 #battery.charging,
 #battery.plugged {
-    color: #abe9b3;
+  animation-name: blink-charging;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 
 #battery.critical:not(.charging) {
-    animation-name: blink;
-    animation-duration: 0.5s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
+  animation-name: blink-critical;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 
-@keyframes blink {
-    to {
-        color: #bf616a;
-    }
+@keyframes blink-charging {
+  to {
+    color: #42e95e;
+  }
+}
+
+@keyframes blink-critical {
+  to {
+    color: #bf616a;
+  }
 }
 
 #battery:hover {
-    color: #abe9b3;
+  color: #42e95e;
 }
 
 #clock:hover {
-    color: #fae3b0;
+  color: #fae3b0;
 }
 
 #workspaces button {
-    background: transparent;
-    font-family: "JetBrains Mono Nerd";
-    font-weight: 900;
-    font-size: 13pt;
-    color: #c0caf5;
-    border: none;
-    border-radius: 5px;
-    padding-top: 5px;
+  background: transparent;
+  font-family: "JetBrains Mono Nerd";
+  font-weight: 900;
+  font-size: 13pt;
+  color: #c0caf5;
+  border: none;
+  border-radius: 5px;
+  padding-top: 5px;
 }
 
 #workspaces button.active {
-    /*background: #13131d;*/
-    border-radius: 4px;
-    border-top: 2px solid #c0caf5;
-    border-bottom: 2px solid #c0caf5;
+  /*background: #13131d;*/
+  border-radius: 4px;
+  border-top: 2px solid #c0caf5;
+  border-bottom: 2px solid #c0caf5;
 }
 
 #workspaces button:hover {
-    background: #11111b;
-    color: #cdd6f4;
-    box-shadow: none;
+  background: #11111b;
+  color: #cdd6f4;
+  box-shadow: none;
 }
 
 #custom-arch {
-    margin-left: 5px;
-    padding: 0 10px;
-    font-size: 25px;
-    transition: color 0.5s;
+  margin-left: 5px;
+  padding: 0 10px;
+  font-size: 25px;
+  transition: color 0.5s;
 }
 
 #custom-arch:hover {
-    color: #1793d1;
+  color: #1793d1;
 }
 
 #custom-weather:hover {
-    color: #2b8b7f;
+  color: #abe9b3;
 }
